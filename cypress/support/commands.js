@@ -24,3 +24,12 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 /// <reference types="cypress-xpath" />
+Cypress.Commands.add('loginTotheApp', (email,pass)=>{
+    
+
+    cy.get("input[name='username']").type(Cypress.env('some_variable'))
+    cy.get("input[name='username']").type("Test@123")
+    registration.getLoginbtn().click()
+    cy.get("#accountTable").should("be.visible")
+
+})
